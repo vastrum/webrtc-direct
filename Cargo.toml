@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = [
+    "protocol",
+    "server",
+    "client",
+    "integration-tests",
+    "integration-tests/frontend/wasm",
+]
+
+[workspace.dependencies]
+webrtc-direct-protocol = { version = "0.1.0", path = "protocol" }
+webrtc-direct-server = { version = "0.1.0", path = "server" }
+webrtc-direct-client = { version = "0.1.0", path = "client" }

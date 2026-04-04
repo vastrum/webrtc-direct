@@ -1,0 +1,18 @@
+[package]
+name = "webrtc-direct-integration-wasm"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+webrtc-direct-client.workspace = true
+webrtc-direct-protocol.workspace = true
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = ["console", "MessageEvent", "Performance", "Window"] }
+js-sys = "0.3"
+futures = "0.3"
+gloo-timers = { version = "0.3.0", features = ["futures"] }
+getrandom = { version = "0.4", features = ["wasm_js"] }

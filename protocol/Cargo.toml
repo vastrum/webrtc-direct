@@ -1,0 +1,10 @@
+[package]
+name = "webrtc-direct-protocol"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+hex = "0.4"
+rand = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+lz4_flex = "0.12"

@@ -1,0 +1,20 @@
+[package]
+name = "webrtc-direct-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+str0m = {version = "0.16", default-features = false, features = ["rust-crypto"]}
+p256 = { version = "0.13", features = ["ecdsa", "pkcs8"] }
+tokio = { version = "1", features = ["sync", "net", "time", "rt", "macros"] }
+stacker = "0.1"
+socket2 = "0.6"
+borsh = { version = "1.6.0", features = ["derive"] }
+eyre = "0.6"
+hex = "0.4"
+rand = "0.10"
+sha2 = { version = "0.10", features = ["oid"] }
+stun_codec = "0.4"
+bytecodec = "0.5"
+webrtc-direct-protocol.workspace = true
+x509-cert = { version = "0.2.5", features = ["builder"] }

@@ -1,0 +1,21 @@
+[package]
+name = "webrtc-direct-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+web-sys = { version = "0.3", features = [
+    "Window", "RtcPeerConnection", "RtcConfiguration",
+    "RtcSessionDescription", "RtcSessionDescriptionInit", "RtcSdpType", "RtcDataChannel",
+    "RtcDataChannelInit", "RtcDataChannelEvent", "RtcPeerConnectionState",
+    "RtcDataChannelState", "RtcDataChannelType", "Event", "MessageEvent",
+    "console",
+]}
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+futures = "0.3"
+gloo-timers = { version = "0.3.0", features = ["futures"] }
+webrtc-direct-protocol.workspace = true
+getrandom = { version = "0.4", features = ["wasm_js"] }
+thiserror = "2"
