@@ -2,12 +2,12 @@ use std::net::SocketAddr;
 use webrtc_direct_server::{DtlsKey, WebRtcServer};
 
 pub async fn start_echo_server() -> (u16, String) {
-    let dtls_key = DtlsKey::from_rng();
-    let dtls_cert = dtls_key.to_dtls_cert();
-    let fingerprint = DtlsKey::cert_fingerprint(&dtls_cert).to_hex();
+    let key = DtlsKey::from_rng();
+    let fingerprint = key.fingerprint().to_hex();
+    let cert = key.to_dtls_cert();
     let port = 3478;
     let addr: SocketAddr = ([127, 0, 0, 1], port).into();
-    let mut server = WebRtcServer::bind(addr, dtls_cert).await.expect("Failed to bind echo server");
+    let mut server = WebRtcServer::bind(addr, cert).await.expect("Failed to bind echo server");
 
     tokio::spawn(async move {
         while let Some((conn, addr)) = server.accept().await {

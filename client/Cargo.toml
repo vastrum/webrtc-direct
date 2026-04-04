@@ -2,6 +2,8 @@
 name = "webrtc-direct-client"
 version = "0.1.0"
 edition = "2024"
+description = "Browser WASM client for WebRTC Direct, connect to a server using only its address and DTLS fingerprint"
+license = "MIT"
 
 [dependencies]
 web-sys = { version = "0.3", features = [

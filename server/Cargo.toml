@@ -2,6 +2,8 @@
 name = "webrtc-direct-server"
 version = "0.1.0"
 edition = "2024"
+description = "Tokio-based WebRTC DataChannel server, accept browser connections without a signaling server"
+license = "MIT"
 
 [dependencies]
 str0m = {version = "0.16", default-features = false, features = ["rust-crypto"]}

@@ -2,6 +2,8 @@
 name = "webrtc-direct-protocol"
 version = "0.1.0"
 edition = "2024"
+description = "Wire protocol (framing, chunking, LZ4 compression, SDP) for WebRTC Direct connections"
+license = "MIT"
 
 [dependencies]
 hex = "0.4"
