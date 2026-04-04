@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "Browser WASM client for WebRTC Direct, connect to a server using only its address and DTLS fingerprint"
 license = "MIT"
+repository = "https://github.com/vastrum/webrtc-direct"
 
 [dependencies]
 web-sys = { version = "0.3", features = [
