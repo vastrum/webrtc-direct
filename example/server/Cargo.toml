@@ -1,0 +1,10 @@
+[package]
+name = "echo-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+webrtc-direct-server = "0.1.0"
+tokio = { version = "1", features = ["full"] }
+axum = "0.8"
+serde_json = "1"

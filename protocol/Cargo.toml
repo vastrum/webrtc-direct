@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "Wire protocol (framing, chunking, LZ4 compression, SDP) for WebRTC Direct connections"
 license = "MIT"
+readme = "../README.md"
 repository = "https://github.com/vastrum/webrtc-direct"
 
 [dependencies]
